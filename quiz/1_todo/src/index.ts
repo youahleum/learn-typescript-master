@@ -1,4 +1,5 @@
-let todoItems;
+// any : string, number등 모든 타입을 칭하는것
+let todoItems: any;
 
 // api
 function fetchTodoItems() {
@@ -16,7 +17,8 @@ function fetchTodos() {
   return todos;
 }
 
-function addTodo(todo) {
+// void : return 되는 값이 없다
+function addTodo(todo): void {
   todoItems.push(todo);
 }
 
