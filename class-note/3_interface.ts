@@ -38,4 +38,40 @@ interface StringArray{
 
 var arr2:StringArray=['a','b','c'];
 
-arr2[0]=10;
+// arr2[0]=10;
+
+// 딕셔너리 패턴
+interface StringRegexDicrionary{
+  [key:string]:RegExp;
+}
+
+var obj2:StringRegexDicrionary={
+  //sth:/abc/,
+  cssFile:/\.css$/,
+  jsFile:/\.js$/
+}
+// obj2['cssFile']='a'  
+
+Object.keys(obj).forEach(function(value){})
+
+// 인터페이스 확장
+interface Person{
+  name:string;
+  age:number;
+}
+
+// interface Developer{
+//   name:string;
+//   age:number;
+//   language:string;
+// }
+// -> 확장  :  extends 후 더해줄 interface를 입력하면 함께 포함이 되어 위의 주석된 developer와 같이 표현이 된다.
+interface Developer extends Person{
+  language:string;
+}
+
+var captain:Developer={
+  language:'ts',
+  age:100,
+  name:'캡틴'
+}
