@@ -70,7 +70,7 @@ interface Developer extends Person{
   language:string;
 }
 
-var captain:Developer={
+var capt2:Developer={
   language:'ts',
   age:100,
   name:'캡틴'
