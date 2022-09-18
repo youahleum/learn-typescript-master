@@ -59,3 +59,19 @@ function logTextLength2<T extends LengthType>(text:T):T{
   text.length;
   return text;
 }
+logTextLength2('a')
+
+// 제네릭 타입 제한 3 - keyof
+interface ShoppingItem{
+  name:string;
+  price:number;
+  stock:number;
+}
+
+// 인자로는 ShoppingItem의 key들만 들어갈 수 있다는 것
+function getShoppingItemOption<T extends keyof ShoppingItem>(itemOption:T){
+return itemOption;
+}
+
+// ctrl +spaceBar 눌러보면 넣을수 있는것이 나온다
+getShoppingItemOption("name");
