@@ -30,3 +30,16 @@ if((tony as Developer3).skill){
   var age=(tony as Person4).age;
   console.log(age)
 }
+
+// 타입가드 정의
+function isDeveloper(target:Developer3 | Person4) : target is Developer3{
+return (target as Developer3).skill !== undefined
+}
+
+
+// 25~31의 코드를 간단하게 작성할 수 있다.
+if(isDeveloper(tony)){
+  tony.skill
+}else{
+  tony.age
+}
