@@ -32,7 +32,9 @@ interface DetailedEropdown<K> extends Dropdown2<K>{
 var detailedItem:DetailedEropdown<number>={
   title:'abc',
   description:'ab',
-  value:'a',
+  value:'a',  // 위에서 제네릭으로 number를 선언해놓았기 때문에 K, T 모두 제네릭으로 number가 와야 한다
   tag:'a'
-
 }
+
+// Best Common Type   - union타입으로 Best Common Type을 지정해준다
+var arr = [1,2,3, true, 'a'];
