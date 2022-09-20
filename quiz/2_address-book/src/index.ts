@@ -99,3 +99,18 @@ class AddressBook {
 }
 
 new AddressBook();
+
+// 1)  타입단언 예시 1
+let div = document.querySelector('div');
+
+// div.innerText;  // 에러발생 null일수 있다고 말해준다
+
+if (div) {
+  div.innerText;
+}
+
+//2))  타입단언 예시 2
+// 타입에 대해  as를 통해 알려주기 때문에 너희는 건들이지 말아라!
+
+let div2 = document.querySelector('.container') as HTMLDivElement;
+div2.innerText;
