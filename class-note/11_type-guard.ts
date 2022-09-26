@@ -19,7 +19,7 @@ function introduce():Developer3 | Person4{
 var tony=introduce();
 
 // 그렇기 때문에 공통된 name만 나타날것 
-console.log(tony.skill);
+console.log(tony.skill); 
 console.log(tony.name);
 
 // 만약 skill을 나타내고 싶다면 타입단언을 사용해볼수 있다.
@@ -31,7 +31,7 @@ if((tony as Developer3).skill){
   console.log(age)
 }
 
-// 타입가드 정의
+// 타입가드 정의   : -- is --
 function isDeveloper(target:Developer3 | Person4) : target is Developer3{
 return (target as Developer3).skill !== undefined
 }
