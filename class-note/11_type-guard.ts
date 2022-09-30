@@ -31,8 +31,8 @@ if((tony as Developer3).skill){
   console.log(age)
 }
 
-// 타입가드 정의   : -- is --
-function isDeveloper(target:Developer3 | Person4) : target is Developer3{
+// 타입가드 정의   : -- is --  : is해당타입
+function isDeveloper(target:Developer3 | Person4) : target is Developer3{  //target이 Developer3인지??
 return (target as Developer3).skill !== undefined
 }
 
